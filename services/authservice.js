@@ -56,6 +56,7 @@ const verifyOTP = async (email, otp) => {
 
   if (!checkOtp) {
     console.log('Otp not found or expired');
+    return;
   }
 
   const kryptonian = await Kryptonian.findOne({ email: checkOtp.email });
@@ -85,6 +86,7 @@ const invalidateApiKey = async (apiKey) => {
     return true;
   } catch (e) {
     console.log('server error occurred');
+    return;
   }
 
 };
