@@ -4,7 +4,12 @@ const config = require('../config');
 // Create Redis client
 const redisClient = redis.createClient({
     host: config.redisHost, 
+
     port: config.redisPort,
+
+
+    password :config.redisPassword 
+
 });
 
 redisClient.on('error', (err) => {
