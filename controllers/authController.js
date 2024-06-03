@@ -1,4 +1,4 @@
-const authService = require('../services/authService'); // Import authentication service
+const authService = require('../services/authservice'); // Import authentication service
 
 // Controller for registering a Kryptonian
 const register = async (req, res) => {
