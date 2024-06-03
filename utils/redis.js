@@ -5,6 +5,7 @@ const config = require('../config');
 const redisClient = redis.createClient({
     host: config.redisHost, 
     port: config.redisPort 
+    //password:config.redisPassword <add this property>
 });
 
 redisClient.on('error', (err) => {
