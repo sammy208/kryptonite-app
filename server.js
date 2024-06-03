@@ -31,4 +31,9 @@ mongoose.connect(config.mongoURI, { useNewUrlParser: true, useUnifiedTopology: t
   .catch(function(err) {
     console.log(err);
     process.exit(1);//exit the process 
+
   }); 
+
+
+
+
