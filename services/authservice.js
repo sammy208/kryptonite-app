@@ -11,6 +11,7 @@ const register = async (email, password) => {
   const hashedPassword = await bcrypt.hash(password, 10);
   const apiKey = uuid.v4();
   const kryptonian = new Kryptonian({ email, password: hashedPassword, apiKey });
+  
   let _save = await kryptonian.save();
   if (!_save) {
     console.log('Server Error Occurred');
